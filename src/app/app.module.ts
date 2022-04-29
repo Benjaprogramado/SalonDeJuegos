@@ -11,6 +11,9 @@ import { PreguntadosComponent } from './page/preguntados/preguntados.component';
 import { HomeComponent } from './page/home/home.component';
 import { QuiensoyComponent } from './page/quiensoy/quiensoy.component';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,8 @@ import { QuiensoyComponent } from './page/quiensoy/quiensoy.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
